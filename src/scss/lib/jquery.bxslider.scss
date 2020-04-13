@@ -1,0 +1,147 @@
+/*! #######################################################################
+
+	MeanMenu 2.0.7
+	--------
+
+	To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
+
+####################################################################### */
+/* hide the link until viewport size is reached */
+/* when under viewport size, .mean-container is added to body */
+a.meanmenu-reveal {
+	display: none;
+}
+.mean-container {
+	.mean-bar {
+		float: left;
+		width: 100%;
+		position: relative;
+		background: #464db2;
+		min-height: 42px;
+		z-index: 999999;
+	}
+	a.meanmenu-reveal {
+		width: 22px;
+		height: 22px;
+		padding: 13px 13px 11px 13px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		text-indent: -9999em;
+		line-height: 22px;
+		font-size: 1px;
+		display: block;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 700;
+		span {
+			display: block;
+			background: #fff;
+			height: 3px;
+			margin-top: 3px;
+		}
+	}
+	.mean-nav {
+		float: left;
+		width: 100%;
+		background: #0c1923;
+		margin-top: 44px;
+		ul {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			list-style-type: none;
+			li {
+				display: block;
+				float: none;
+				width: 100%;
+				padding: 0;
+				height: auto !important;
+				text-align: center;
+				background: url(../../images/bgmenusp.jpg) repeat-x left top;
+				border-bottom: 1px solid #aeafe3;
+				a {
+					font-size: 13px;
+					width: 100%;
+					height: 53px;
+					margin-left: 0;
+					display: block;
+				}
+				a.mean-expand {
+					height: 22px !important;
+					position: absolute;
+					width: 47px !important;
+					right: 0px !important;
+					top: 14px;
+					color: #fff;
+					padding: 0px !important;
+					font-size: 15px !important;
+					font-weight: bold;
+					border: none !important;
+					text-decoration: none;
+				}
+			}
+			li.menu0 {
+				border-top: 1px solid #aeafe3;
+			}
+			li.menu4 {
+				border-bottom: 2px solid #aeafe3;
+			}
+		}
+		.mainMenu {
+			li {
+				a {
+					&:hover {
+						background: transparent url(../images/bgactivemenu.jpg) center center repeat-x;
+					}
+				}
+				a.mean-expand {
+					&:hover {
+						background: none;
+					}
+				}
+			}
+			li.active {
+				a {
+					background: transparent url(../images/bgactivemenu.jpg) center center repeat-x;
+				}
+				.subMenu {
+					li {
+						a {
+							background: none;
+						}
+					}
+				}
+			}
+			li.hasSub {
+				.subMenu {
+					li {
+						background: #fff;
+						display: block;
+						height: auto;
+						padding: 0;
+						border-top: 1px solid #949dbf;
+						border-bottom: none;
+						float: none;
+						a {
+							height: auto;
+							padding: 10px 0;
+							font-weight: bold;
+							text-decoration: none;
+							&:hover {
+								text-decoration: underline;
+								background: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		li.hasSub {
+			position: relative;
+		}
+	}
+}
